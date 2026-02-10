@@ -5,8 +5,8 @@ st.markdown("""
                .block-container {
                     padding-top: 1rem;
                     padding-bottom: 0rem;
-                    padding-left: 5rem;
-                    padding-right: 5rem;
+                    padding-left: 1rem;
+                    padding-right: 1rem;
                 }
         </style>
         """, unsafe_allow_html=True)
@@ -94,4 +94,5 @@ with c2:
 with c3:
     st.write('artitopgo@gmail.com')
 with c4:
+
     st.write('litvinovsergey2005@gmail.com')
