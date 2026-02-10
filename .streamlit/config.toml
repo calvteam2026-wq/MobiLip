@@ -1,0 +1,21 @@
+[client]
+# Убирает лишние пункты меню, оставляя интерфейс чистым
+toolbarMode = "minimal"
+
+[[theme.fontFaces]]
+family="pt-astra-sans-bold-italic"
+url="pt-astra-sans-bold-italic.woff"
+style = 'italic'
+
+[theme]
+base="light"
+borderColor="mediumSlateBlue"
+font = "pt-astra-sans-bold-italic"
+
+[theme.sidebar]
+backgroundColor="aliceBlue"
+secondaryBackgroundColor="skyBlue"
+
+[ui]
+# Полностью скрывает верхнюю панель управления
+hideTopBar = true
