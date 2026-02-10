@@ -10,7 +10,7 @@ st.markdown("""
 /* Когда sidebar закрыт (кнопка покоя) */
 [data-testid="stSidebarExpandButton"] * {
     transform: scale(1.6) !important;
-    transform-origin: center;
+    transform-origin: left;
 }
 </style>
 """, unsafe_allow_html=True)
@@ -20,6 +20,7 @@ main_page = st.Page("pages/main_page.py", title="Главная")
 pg = st.navigation([main_page, about_us, buy_page])
 
 pg.run()
+
 
 
 
