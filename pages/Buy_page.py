@@ -74,7 +74,7 @@ def send_email(recipient, message_text):
         return False, "Неверный email получателя"
 
 @st.dialog("Подтверждение покупки")
-def check_buy(count_1, count_2, count_3, count_4, FIO, client_adress, client_mail, client_number, message):
+def check_buy(count_1, count_2, count_3, count_4, FIO, client_adress, client_mail, client_number, message_0):
     st.write("Проверьте данные и закончите покупку")
     st.write(f'ФИО: {FIO}')
     st.write(f'Почта покупателя: {client_mail}')
@@ -86,8 +86,6 @@ def check_buy(count_1, count_2, count_3, count_4, FIO, client_adress, client_mai
     st.write(f'Город доставки: {option if option else "Не указан"}')
     st.write(f'Адрес: {client_adress}')
     if st.button("Потвердить"):
-        recipient = 'matkulov.isabek@gmail.com' #напишите здесь кому из команды будет приходить сообщение
-        send_email(recipient, message)
 
         message = f''' Уважаемый (ая) {FIO}, Вы оформили новый заказ:
                 Мышь №1: {count_1} шт.
@@ -102,6 +100,8 @@ def check_buy(count_1, count_2, count_3, count_4, FIO, client_adress, client_mai
         if not ok:
             st.error("Почта введена неверно. Измените email.")
             st.stop()
+        recipient = 'matkulov.isabek@gmail.com' #напишите здесь кому из команды будет приходить сообщение
+        send_email(recipient, message_0)
         st.success("Заказ оформлен! Можете закрыть это окно.")
 
 
@@ -127,6 +127,7 @@ if st.button('Оформить покупку', type='primary'):
             placeholder.badge("Недостаточно данных!", color="red") # Пишем туда сообщение
             time.sleep(4)  # Ждем 4 секунд
             placeholder.empty()
+
 
 
 
