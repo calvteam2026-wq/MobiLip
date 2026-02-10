@@ -8,16 +8,17 @@ url="pt-astra-sans-bold-italic.woff"
 style = 'italic'
 
 [theme]
-base="light"
-borderColor="#EA580C"
+base="dark"
+borderColor="#334155"
 font = "pt-astra-sans-bold-italic"
 
 [theme.sidebar]
-backgroundColor="#FAFAF9"
-secondaryBackgroundColor="#FFEDD5"
+backgroundColor="#0F172A"
+secondaryBackgroundColor="#1E293B"
 
 [ui]
 # Полностью скрывает верхнюю панель управления
 hideTopBar = true
+
 
 
