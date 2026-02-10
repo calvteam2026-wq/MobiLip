@@ -17,7 +17,7 @@ def load_lottiefile(filepath: str):
     with open(filepath, "r") as f:
         return json.load(f)
 
-lottie_joystick = load_lottiefile("pages/Joystick.json")  # replace link to local lottie file
+lottie_joystick = load_lottiefile("pages/joy_stick.json")  # replace link to local lottie file
 col1, col2 = st.columns([1,3])
 with col1:
     st_lottie(
@@ -95,6 +95,7 @@ with col5:
                     базу для масштабного выхода продукта на 
                     глобальный рынок ассистивных технологий.
                 ''')
+
 
 
 
