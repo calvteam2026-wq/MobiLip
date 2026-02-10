@@ -3,13 +3,13 @@ st.markdown("""
 <style>
 /* Кнопка сворачивания sidebar */
 button[kind="header"] svg {
-    width: 10vw;
-    height: 10vw;
+    width: 20vw;
+    height: 20vw;
 }
 
 /* Увеличение кликабельной области */
 button[kind="header"] {
-    padding: 10vw;
+    padding: 20vw;
 }
 </style>
 """, unsafe_allow_html=True)
@@ -20,6 +20,7 @@ main_page = st.Page("pages/main_page.py", title="Главная")
 pg = st.navigation([main_page, about_us, buy_page])
 
 pg.run()
+
 
 
 
