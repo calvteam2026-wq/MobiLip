@@ -9,13 +9,14 @@ style = 'italic'
 
 [theme]
 base="light"
-borderColor="mediumSlateBlue"
+borderColor="#4F46E5"
 font = "pt-astra-sans-bold-italic"
 
 [theme.sidebar]
-backgroundColor="aliceBlue"
-secondaryBackgroundColor="skyBlue"
+backgroundColor="#F8FAFC"
+secondaryBackgroundColor="#E0E7FF"
 
 [ui]
 # Полностью скрывает верхнюю панель управления
 hideTopBar = true
+
