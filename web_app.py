@@ -1,11 +1,10 @@
 import streamlit as st
 st.markdown("""
 <style>
-/* Любая кнопка управления сайдбаром */
-button[aria-label="Open sidebar"] *,
-button[aria-label="Close sidebar"] * {
-    transform: scale(1.6) !important;
-    transform-origin: center;
+[data-testid="stSidebarExpandButton"] svg,
+[data-testid="stSidebarCollapseButton"] svg {
+    width: 150px !important;
+    height: 150px !important;
 }
 </style>
 """, unsafe_allow_html=True)
@@ -15,6 +14,7 @@ main_page = st.Page("pages/main_page.py", title="Главная")
 pg = st.navigation([main_page, about_us, buy_page])
 
 pg.run()
+
 
 
 
