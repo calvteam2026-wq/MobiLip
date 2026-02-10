@@ -14,12 +14,13 @@ font = "pt-astra-sans-bold-italic"
 backgroundColor="#262730"
 
 [theme.sidebar]
-backgroundColor="#00FA9A"
+backgroundColor="#0F172A"
 secondaryBackgroundColor="#1E293B"
 
 [ui]
 # Полностью скрывает верхнюю панель управления
 hideTopBar = true
+
 
 
 
