@@ -88,11 +88,15 @@ with c4:
 
 st.write('')
 with c1:
+    st.write('')
     st.write('urazbekov2004@gmail.com')
 with c2:
+    st.write('')
     st.write('matkulov.isabek@gmail.com')
 with c3:
+    st.write('')
     st.write('artitopgo@gmail.com')
 with c4:
-
+    st.write('')
     st.write('litvinovsergey2005@gmail.com')
+
