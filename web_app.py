@@ -8,15 +8,15 @@ st.markdown(
         height: 10vw;
         min-width: 50px;
         min-height: 50px;
-        background-color: #2e7bcf; /* Синий цвет */
+        background-color: white; /* Синий цвет */
         color: white;
         border-radius: 2vw;
     }
 
     [data-testid="stSidebarCollapseButton"] svg {
-        fill: white; /* Цвет самой стрелочки */
-        width: 2vw;
-        height: 2vw;
+        fill: #1123f0; /* Цвет самой стрелочки */
+        width: 8vw;
+        height: 8vw;
         min-width: 20px;
     }
 
@@ -36,3 +36,4 @@ main_page = st.Page("pages/main_page.py", title="Главная")
 pg = st.navigation([main_page, about_us, buy_page])
 
 pg.run()
+
