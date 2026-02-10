@@ -8,21 +8,21 @@ st.markdown(
         height: 10vw;
         min-width: 50px;
         min-height: 50px;
-        background-color: white; /* Синий цвет */
+        background-color: blue; /* Синий цвет */
         color: white;
         border-radius: 2vw;
     }
 
     [data-testid="stSidebarCollapseButton"] svg {
-        fill: #1123f0; /* Цвет самой стрелочки */
-        width: 8vw;
-        height: 8vw;
-        min-width: 20px;
+        fill: white; /* Цвет самой стрелочки */
+        width: 20vw;
+        height: 20vw;
+        min-width: 100px;
     }
 
     /* Ховер-эффект */
     [data-testid="stSidebarCollapseButton"]:hover {
-        background-color: #1e5ca3;
+        background-color: blue;
         border: 2px solid #ffffff;
     }
     </style>
@@ -36,4 +36,5 @@ main_page = st.Page("pages/main_page.py", title="Главная")
 pg = st.navigation([main_page, about_us, buy_page])
 
 pg.run()
+
 
