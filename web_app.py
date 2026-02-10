@@ -4,8 +4,8 @@ st.markdown(
     <style>
     /* Стили для кнопки сайдбара */
     [data-testid="stSidebarCollapseButton"] {
-        width: 10vw; 
-        height: 10vw;
+        width: 20vw; 
+        height: 20vw;
         min-width: 50px;
         min-height: 50px;
         background-color: blue; /* Синий цвет */
@@ -15,8 +15,8 @@ st.markdown(
 
     [data-testid="stSidebarCollapseButton"] svg {
         fill: white; /* Цвет самой стрелочки */
-        width: 20vw;
-        height: 20vw;
+        width: 400px;
+        height: 400px;
         min-width: 100px;
     }
 
@@ -36,5 +36,6 @@ main_page = st.Page("pages/main_page.py", title="Главная")
 pg = st.navigation([main_page, about_us, buy_page])
 
 pg.run()
+
 
 
