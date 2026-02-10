@@ -7,20 +7,20 @@ st.markdown(
         background-color: #ff4b4b; /* Цвет фона кнопки */
         color: white;             /* Цвет самой стрелочки */
         border-radius: 50%;       /* Сделать её круглой */
-        width: 20vw;              /* Ширина */
-        height: 20vw;             /* Высота */
+        width: 10vw;              /* Ширина */
+        height: 10vw;             /* Высота */
     }
 
     /* Эффект при наведении */
     [data-testid="stSidebarCollapseButton"]:hover {
         background-color: #ff1f1f;
-        transform: scale(1.1);    /* Немного увеличиваем при наведении */
+        transform: scale(1.5);    /* Немного увеличиваем при наведении */
     }
 
     /* Изменение размера самой иконки (стрелочки) внутри кнопки */
     [data-testid="stSidebarCollapseButton"] svg {
-        width: 20vw;
-        height: 20vw;
+        width: 40vw;
+        height: 40vw;
     }
     </style>
     """,
@@ -33,6 +33,7 @@ main_page = st.Page("pages/main_page.py", title="Главная")
 pg = st.navigation([main_page, about_us, buy_page])
 
 pg.run()
+
 
 
 
