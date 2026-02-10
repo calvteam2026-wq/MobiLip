@@ -62,12 +62,16 @@ def send_email(recipient, message_text):
     msg['From'] = sender
     msg['To'] = recipient
 
-    # Прямое выполнение без проверок
-    server = smtplib.SMTP('smtp.gmail.com', 587)
-    server.starttls()
-    server.login(sender, password)
-    server.sendmail(sender, recipient, msg.as_string())
-    server.quit()
+    try:
+        server = smtplib.SMTP('smtp.gmail.com', 587)
+        server.starttls()
+        server.login(sender, password)
+        server.sendmail(sender, recipient, msg.as_string())
+        server.quit()
+        return True, None
+
+    except smtplib.SMTPRecipientsRefused:
+        return False, "Неверный email получателя"
 
 @st.dialog("Подтверждение покупки")
 def check_buy(count_1, count_2, count_3, count_4, FIO, client_adress, client_mail, client_number, message):
@@ -94,7 +98,10 @@ def check_buy(count_1, count_2, count_3, count_4, FIO, client_adress, client_mai
                 Адрес: {client_adress}.
                 '''
         recipient = client_mail
-        send_email(recipient, message)
+        ok, err = send_email(recipient, message)
+        if not ok:
+            st.error("Почта введена неверно. Измените email.")
+            st.stop()
         st.success("Заказ оформлен! Можете закрыть это окно.")
 
 
@@ -120,6 +127,7 @@ if st.button('Оформить покупку', type='primary'):
             placeholder.badge("Недостаточно данных!", color="red") # Пишем туда сообщение
             time.sleep(4)  # Ждем 4 секунд
             placeholder.empty()
+
 
 
 
