@@ -11,7 +11,6 @@ style = 'italic'
 base="dark"
 borderColor="#40b6ff"
 font = "pt-astra-sans-bold-italic"
-backgroundColor="#092f82"
 
 [theme.sidebar]
 backgroundColor="#0F172A"
@@ -20,6 +19,7 @@ secondaryBackgroundColor="#1E293B"
 [ui]
 # Полностью скрывает верхнюю панель управления
 hideTopBar = true
+
 
 
 
