@@ -8,8 +8,8 @@ st.markdown("""
                .block-container {
                     padding-top: 1rem;
                     padding-bottom: 0rem;
-                    padding-left: 5rem;
-                    padding-right: 5rem;
+                    padding-left: 1rem;
+                    padding-right: 1rem;
                 }
         </style>
         """, unsafe_allow_html=True)
@@ -120,5 +120,6 @@ if st.button('Оформить покупку', type='primary'):
             placeholder.badge("Недостаточно данных!", color="red") # Пишем туда сообщение
             time.sleep(4)  # Ждем 4 секунд
             placeholder.empty()
+
 
 
