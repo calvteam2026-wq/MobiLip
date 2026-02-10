@@ -2,28 +2,25 @@ import streamlit as st
 st.markdown(
     """
     <style>
-    /* Стили для кнопки сайдбара */
+    /* Находим кнопку по атрибуту data-testid */
     [data-testid="stSidebarCollapseButton"] {
-        width: 20vw; 
-        height: 20vw;
-        min-width: 50px;
-        min-height: 50px;
-        background-color: blue; /* Синий цвет */
-        color: white;
-        border-radius: 2vw;
+        background-color: #ff4b4b; /* Цвет фона кнопки */
+        color: white;             /* Цвет самой стрелочки */
+        border-radius: 50%;       /* Сделать её круглой */
+        width: 20vw;              /* Ширина */
+        height: 20vw;             /* Высота */
     }
 
-    [data-testid="stSidebarCollapseButton"] svg {
-        fill: white; /* Цвет самой стрелочки */
-        width: 400px;
-        height: 400px;
-        min-width: 100px;
-    }
-
-    /* Ховер-эффект */
+    /* Эффект при наведении */
     [data-testid="stSidebarCollapseButton"]:hover {
-        background-color: blue;
-        border: 2px solid #ffffff;
+        background-color: #ff1f1f;
+        transform: scale(1.1);    /* Немного увеличиваем при наведении */
+    }
+
+    /* Изменение размера самой иконки (стрелочки) внутри кнопки */
+    [data-testid="stSidebarCollapseButton"] svg {
+        width: 20vw;
+        height: 20vw;
     }
     </style>
     """,
@@ -36,6 +33,7 @@ main_page = st.Page("pages/main_page.py", title="Главная")
 pg = st.navigation([main_page, about_us, buy_page])
 
 pg.run()
+
 
 
 
